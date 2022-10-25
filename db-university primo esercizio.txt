@@ -1,0 +1,23 @@
+QUERY N°1
+SELECT COUNT(*) FROM `students` WHERE `date_of_birth` LIKE '1990%';
+
+QUERY N°2
+SELECT * FROM `courses` WHERE `cfu` > 10;
+
+QUERY N°3
+SELECT * FROM `students` WHERE `date_of_birth` < '1992-01-01';
+
+QUERY N°4
+SELECT * FROM `courses` WHERE `period` = 'I semestre' AND `year` = 1;
+
+QUERY N°5
+SELECT * FROM `exams` WHERE `date` LIKE '2020-06-20' AND `hour` >= '14:00:00';
+
+QUERY N°6
+SELECT * FROM `degrees` WHERE `level` = 'MAGISTRALE';
+
+QUERY N°7
+SELECT * FROM `departments`
+
+query n°8
+SELECT * FROM `teachers` WHERE `phone` LIKE '%';
