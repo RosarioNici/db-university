@@ -15,4 +15,34 @@ if($conn && $conn->connect_error){
     echo "SEI CONNESSO!";
 }
 
+
+
+
+$sql = "SELECT `name` FROM `student`";
+
+$resul = $conn->query($sql);
+
+
+if($result && $result->num_rows > 0){
+
+  while($row = $result->fetch_assoc()){;
+
+
+?>
+
+<div>
+    <?php
+    echo "name". $row ['name'] ;
+    ?>
+</div>
+<?php
+  }
+}elseif($result){
+    echo "Non ci sono risultati";
+}else{
+    echo "Errore";
+}
+
+$conn->close();
+
 ?>
