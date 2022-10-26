@@ -6,7 +6,7 @@ define("DB_PASSWORD", "root");
 define("DB_NAME", "db-university");
 
 
-$conn = new mysql(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
+$conn = new mysqli(DB_SERVERNAME, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
 
 if($conn && $conn->connect_error){
@@ -18,9 +18,9 @@ if($conn && $conn->connect_error){
 
 
 
-$sql = "SELECT `name` FROM `student`";
+$sql = "SELECT `name` FROM `students` LIMIT 25";
 
-$resul = $conn->query($sql);
+$result = $conn->query($sql);
 
 
 if($result && $result->num_rows > 0){
